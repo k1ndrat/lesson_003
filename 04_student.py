@@ -11,4 +11,12 @@
 
 educational_grant, expenses = 10000, 12000
 
-# TODO здесь ваш код
+counter = 0
+moneyFor10Months = expenses
+while counter != 9:
+    expenses = 1.03 * expenses
+    moneyFor10Months += expenses
+    counter += 1
+
+print(moneyFor10Months)
+print(moneyFor10Months - 10 * educational_grant)
