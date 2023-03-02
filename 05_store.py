@@ -46,10 +46,10 @@ store = {
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
 
-# TODO здесь ваш код
-
-
-
-
-
-
+for el, code in goods.items():
+    summaryCount = 0
+    summaryPrice = 0
+    for line in store[code]:
+        summaryPrice += line['price'] * line['quantity']
+        summaryCount += line['quantity']
+    print(f"{el} - {summaryCount} шт, стоимость {summaryPrice} руб")
